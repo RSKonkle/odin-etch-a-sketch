@@ -3,13 +3,13 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: 32px;
-    width: 32px;
-    border: 1px solid black;
+    height: 320px;
+    width: 320px;
+    border: 2px solid black;
 }
 
 .tile {
-    height: 2px;
-    width: 2px;
-    background-color: orange;
+    height: 20px;
+    width: 20px;
+    background-color: antiquewhite;
 }
