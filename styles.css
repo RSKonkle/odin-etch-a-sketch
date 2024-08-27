@@ -1,1 +1,15 @@
 /* STYLE-SHEET */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 32px;
+    width: 32px;
+    border: 1px solid black;
+}
+
+.tile {
+    height: 2px;
+    width: 2px;
+    background-color: orange;
+}
