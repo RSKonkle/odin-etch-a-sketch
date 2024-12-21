@@ -34,5 +34,5 @@ function newGrid() {
 createDivs();
 mouseDraw();
 
-const button = document.querySelector(".button");
+const button = document.querySelector("button");
 button.addEventListener("click", newGrid);
