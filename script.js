@@ -2,8 +2,13 @@
 const container = document.querySelector(".container");
 
 // createDivs: loop that will create divs until specified number is reached
-function createDivs(num = 256) {
-    for (let i = 1; i <= num; i++) {
+function createDivs(gridSize = 16) {
+    container.innerHTML = "";
+
+    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
+    for (let i = 1; i <= gridSize * gridSize; i++) {
         const tile = document.createElement("div");
         tile.classList.add("tile");
         container.appendChild(tile);
