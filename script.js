@@ -1,7 +1,6 @@
 // JavaScript - Etch-a-Sketch //
 const container = document.querySelector(".container");
 
-// OBJECTIVE - develop function to create 16x16 grid of square divs
 // createDivs: loop that will create divs until specified number is reached
 function createDivs(num = 256) {
     for (let i = 1; i <= num; i++) {
@@ -11,7 +10,6 @@ function createDivs(num = 256) {
     }
 }
 
-// OBJECTIVE - develop a function that changes the background color of tile when hovered
 // mouseDraw: attaches event listener to all .tile class elements, that will change background color on mouseover
 function mouseDraw() {
     container.addEventListener("mouseover", (e) => {
@@ -22,5 +20,19 @@ function mouseDraw() {
 
 }
 
+// newGrid: will resize grid based on user input for pixel count, clearing old grid
+function newGrid() {
+    let newSize = parseInt(prompt("Enter the number of squares per side for the new grid:"))
+    if (isNaN(newSize) || newSize < 1 || newSize > 100) {
+        alert("Please enter a number between 1 and 100.");
+        return;
+    }
+
+    createDivs(newSize);
+}
+
 createDivs();
 mouseDraw();
+
+const button = document.querySelector(".button");
+button.addEventListener("click", newGrid);
