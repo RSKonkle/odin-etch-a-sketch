@@ -1,15 +1,12 @@
 /* STYLE-SHEET */
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 320px;
-    width: 320px;
+    display: grid;
+    height: 400px;
+    width: 400px;
     border: 2px solid black;
 }
 
 .tile {
-    height: 20px;
-    width: 20px;
     background-color: antiquewhite;
 }
