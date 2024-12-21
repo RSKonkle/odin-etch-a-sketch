@@ -19,7 +19,12 @@ function createDivs(gridSize = 16) {
 function mouseDraw() {
     container.addEventListener("mouseover", (e) => {
         if (e.target.classList.contains("tile")) {
-            e.target.style.backgroundColor = "black";
+
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         }
     })
 
